@@ -1,0 +1,6 @@
+[
+	{
+		"caption": "phpfmt",
+		"command": "php_fmt",
+	}
+]
