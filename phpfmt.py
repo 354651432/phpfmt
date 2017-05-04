@@ -11,7 +11,7 @@ class PhpFmtCommand(sublime_plugin.TextCommand):
 			sublime.error_message("file not found")
 			return
 
-		p=subprocess.Popen("php \"%s\\fmt.php\" -o=- \"%s\""%(path,file),shell=True,stdout=subprocess.PIPE)
+		p=subprocess.Popen("php \"%s\\fmt.php\" -o=- --psr \"%s\""%(path,file),shell=True,stdout=subprocess.PIPE)
 		# p.wait()
 		ret=p.stdout.readlines()
 		ret=map(lambda x:x.decode("utf8","ignore"),ret)
